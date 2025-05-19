@@ -1,0 +1,65 @@
+Today, I started the MIT OpenCourseWare with a video lecture by Professor Anant Agarwal. And I instantly got stuck on some concepts: *“What the heck is Maxwell’s equation?”*, *“What does op-amp mean?”*, *“Abstraction? Amplifier? Lumped?”*
+
+DeepSeek and ChatGPT told me that I don’t need to completely understand Maxwell’s equations to take 6.002 (Circuits and Electronics). But I can’t accept what I don’t know — it’s just my nature to fully understand everything I encounter (sometimes it’s annoying, but that’s how I am). Students taking the course seem to already know all the things Professor Agarwal mentions. So, I spent my first day breaking down two of Maxwell’s equations and trying to understand some key abstractions.
+
+---
+
+### Basic Knowledge Required for the First Lecture
+
+#### Ohm’s Law
+\[
+I = \frac{V}{R}
+\]
+Current equals voltage divided by resistance.
+
+---
+
+#### Kirchhoff’s Laws
+
+**KVL (Kirchhoff’s Voltage Law)**  
+The sum of the electrical potential differences (voltages) around any closed loop is zero.  
+*Put simply: if you walk around a closed circuit loop, the voltage gains and drops must cancel out.*
+
+**KCL (Kirchhoff’s Current Law)**  
+The total current entering a junction (node) is equal to the total current leaving the junction.  
+*Put simply: at any point where wires connect, what flows in must flow out.*
+
+---
+
+### Where I Got Stuck
+
+#### Maxwell-Faraday Equation (One of Maxwell’s Equations)
+
+\[
+\nabla \times \mathbf{E} = -\frac{\partial \mathbf{B}}{\partial t}
+\]
+
+This is the **Maxwell-Faraday equation**.  
+- \( \mathbf{E} \) represents the electric field.  
+- \( \mathbf{B} \) represents the magnetic field.  
+- \( \nabla \times \mathbf{E} \) is the **curl** of the electric field.  
+- \( \frac{\partial \mathbf{B}}{\partial t} \) is the **rate of change** of the magnetic field with respect to time.
+
+This equation tells us that a changing magnetic field induces a circulating electric field.  
+In words: **“The line integral of the electric field around a closed loop equals the negative time rate of change of the magnetic flux through the loop.”**
+
+---
+
+#### Gauss’s Law for Magnetism (Another Maxwell Equation)
+
+\[
+\nabla \cdot \mathbf{B} = 0
+\]
+
+- The upside-down triangle (∇) represents the **divergence** operator.  
+- This equation says: *“The divergence of the magnetic field is zero.”*
+
+In simpler terms: magnetic field lines have **no beginning or end** — there is no magnetic monopole. Magnetic field lines always form **closed loops**.
+
+Imagine arrows filling space, all connecting end-to-end in a loop. That’s a magnetic field.
+
+---
+
+### Closing Note
+
+This is my first post, where I try to explain two of Maxwell’s equations. I will continue until the day I fully understand 6.002. I’m just a student who is learning. I might make many mistakes, so if you read this post, please read it critically — and I’d be deeply grateful for any feedback or corrections.
