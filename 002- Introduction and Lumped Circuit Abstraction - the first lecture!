@@ -1,0 +1,101 @@
+Let’s start! 
+The first class with Professor Anant Agarwal was about lumped abstraction- make things simple. We discussed two of Maxwell’s equations in the last posting, which was hard. And I was a little bit glad when Professor Anant Agarwal also said, “It is hard stuff.”. (Even MIT Professor admits it’s difficult! Not to mention for me.) So we make it simple. For example, when you use your computer to do something like writing a blog, searching, chatting with ChatGPT, you don’t need to care about the complex details of computer and internet operation, structure. How to do this? Let’s begin. 
+
+### Key Words (actually, not key words, all the words that I didn’t know) Lumped Circuit Abstraction (Electric circuit)
+ - Electrical engineering modeling approach simplifies the behavior of circuits. Assuming all electric properties are concentrated at discrete points. (not distributed across space) 
+1. Instantaneous signal propagation (the signal spreads out instantly, no delay time.) 
+2. No spatial variation within components (no internal variation, happens at one point) 
+3. Component size is much smaller than the signal wavelength (ignore the electromagnetic wave effects) To -> only deals with Ohm’s law and Kirchhoff’s law. Avoid Maxwell’s equations (Hooray!). 
+(It’s not that essential for 6.002… I wrote just for the one who cannot accept what I don’t know about – just as me.) 
+
+- Amplifier Abstraction
+Simplified model, treat the amplifier as a black box with an input and an output 
+
+- op-amp 
+The example of amplifier abstraction. It’s an ideal amplifier. Input current is zero 
+(doesn’t consume electric current, only sensing voltage difference. So it doesn’t affect the circuit in front of it.) 
+And when it connected with feedback, the input voltage is also zero. 
+
+- digital abstraction 
+A method of simplifying a real-world signal into binary values (ex, 0, 1) 
+
+-Analogical abstraction 
+Understand a complex system by using analogies from a familiar system. 
+
+-Combinational logic 
+A type of digital logic circuit where the output depends only on the current input (no memory) 
+
+-Clock (digital clock signal) A repetitive timing signal used to synchronize operation in digital circuits, especially CPU(Computer Processing Unit)s
+
+What do you think engineering is? This is the first thing that the Professor thought about.
+Engineering is the purposeful use of science.
+
+And the course 6.003 is about:
+* Gainful employment of Maxwell’s equations
+* From electrons to digital gates and op-amps
+[which means we will learn from the basic(electrons) to high level(analogical op-amp)]
+
+If you go to MIT OCW, you will find a complex blue table. It will be quite hard to understand.
+The table illustrates the multi–layered abstraction process in electrical and computer systems:
+
+1. **Nature as Observed**  
+   - We begin with raw experimental data, such as voltage and current tables.
+
+2. **Physics Laws / Abstractions**  
+   - Maxwell’s equations and Ohm’s law give us mathematical models to replace raw data with usable equations.
+
+3. **Lumped Circuit Abstraction**  
+   - We assume signals travel instantaneously, and we use idealized components like resistors (R), capacitors (C), and inductors (L).
+
+4. **Amplifier Abstraction**  
+   - We simplify real amplifiers into ideal models, such as op-amps with no current draw and infinite gain.
+
+5. **Digital Abstraction**  
+   - Real-world signals are converted into binary logic (0 or 1) using gates and logic circuits.
+
+6. **Higher-Level Abstractions**  
+   - These include:
+     - **Combinational logic**: Output depends only on current inputs.
+     - **Clocked logic**: Uses clock signals to synchronize changes.
+     - **Instruction set abstraction**: Used in computer processors like Pentium or MIPS.
+
+This abstraction ladder is what allows us to build and reason about complex systems, from simple physical components to powerful computers.
+
+So, it’s similar to estimating. In mathematics, if we encounter complex notation, we often round it with comfort numbers like 60000 or 23.4 x 10^13. 
+	
+For example, we observe nature and use experiments, and find some laws in it. 
+
+Let’s apply it to solve problems!
+
+Imagine a voltage source(battery) and a light bulb connected with a wire. (If it’s hard to imagine, just look at the lecture note 6p) What is the current through the bulb?
+
+We can use Maxwell’s equations to solve it. But it’s really hard and complicated. So you decided to apply the abstraction you’ve learned in the 6.002 course. But how? Let me explain with a simple physics notation.
+
+Imagine a force is acting on an object(If it’s hard to imagine, just look at 8p of the lecture note). What is its acceleration? 
+
+If you know the mass of the object, you will find out the answer in a short time.
+ a =     F/M
+
+In doing this, you focused on its mass and ignored the shape, color, temperature, direction, friction, and so on. You ignored many things. And only focused on mass.
+This is Point-mass discretization.
+
+Let’s go back to our original question: What is the current through the bulb?
+
+Like we ignored the shape and other things about the mass in our second question, here we will not care about:
+* How current flows inside the filament
+* its temperature, shape, orientation(direction), etc.
+
+So we are going to replace the bulb with a discrete resistor – that represents the only property of interest.
+I = V/R is called the element v-I relationship.
+
+Here, Resister is a lumped element abstraction for the bulb.
+But we have to make sure that our abstraction is reasonable. At the last question, we used Ohm’s Law. When you are solving problems with currents and voltage, they must be defined.
+We are going to do this with Kircuff’s law. 
+And through that, we can assume the charge capacity and magnetic flux is zero.
+
+Lumped element examples whose behavior is completely captured by their V–I relationship
+
+It can’t predict the Exploding Resistor Demo and the Pickle Demo(can’t predict light, smell)
+
+It’s hard to understand, and it’s much harder to explain in my own words.	
+I don't know who is reading this, but if any of you find some mistakes, feel free to let me know. 
